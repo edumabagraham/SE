@@ -1,0 +1,19 @@
+{
+  "env": {
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "parserOptions": { "ecmaVersion": 8 }, // to enable features such as async/await
+  "ignorePatterns": ["node_modules/*", ".next/*", ".out/*", "!.prettierrc"],
+  "extends": "@callstack/eslint-config/react",
+  "rules": {
+    "prettier/prettier": "warn",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ]
+  }
+}

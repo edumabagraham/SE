@@ -1,0 +1,17 @@
+{
+	"env": {
+		"es6": true,
+		"jest": true,
+		"node": true
+	},
+	"extends": "@callstack/eslint-config/node",
+	"rules": {
+		"prettier/prettier": "warn",
+		"import/no-extraneous-dependencies": [
+			"error",
+			{
+				"devDependencies": true
+			}
+		]
+	}
+}
