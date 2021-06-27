@@ -1,0 +1,24 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "next": "10.2.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-spinners": "^0.10.6",
+    "react-toastify": "^7.0.4",
+    "sass": "^1.32.13"
+  },
+  "devDependencies": {
+    "@callstack/eslint-config": "^10.2.0",
+    "eslint": "^7.26.0",
+    "prettier": "^2.3.0"
+  }
+}

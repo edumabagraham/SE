@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.root {
+  background: #e9f4f9;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-input {
+  margin-right: 1rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 50vw;
+  border: 1px solid #cdd8df;
+  color: #6c828d;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #cdd8df !important;
+  }
+}
+
+.todo-btn {
+  padding: 1rem 0;
+  border: none;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 9vw;
+  cursor: pointer;
+}
+
+.sub-task-input {
+  margin-top: 2rem;
+  margin-right: 1rem;
+  background: #fff;
+  padding: 0.7rem;
+  border-radius: 10px;
+  width: 90%;
+  border: 1px solid #cdd8df;
+  color: #6c828d;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #cdd8df !important;
+  }
+}
+
+main {
+  margin-top: 4rem;
+  width: 60vw;
+  height: 60vh;
+  overflow-y: auto;
+}
+
+.checkbox {
+  margin-right: 1rem;
+}
+
+.task-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #000;
+
+  & > input {
+    margin-right: 1rem;
+  }
+}
+
+.add-subtask {
+  margin-left: 1rem;
+
+  & > input {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    background: #fff;
+    padding: 0.5rem;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #cdd8df;
+    color: #6c828d;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #cdd8df !important;
+    }
+  }
+
+  & > button {
+    text-decoration: none;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 0.475rem;
+    display: inline-block;
+    padding: 0.9rem;
+    border-radius: 50%;
+  }
+}
+
+.add-task-btn {
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 0.6rem 1rem 0.6rem 1rem;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 720px) {
+  main {
+    width: 95vw;
+    margin-top: 2rem;
+  }
+
+  .todo-input {
+    width: 55vw;
+  }
+  .todo-btn {
+    width: 35vw;
+  }
+
+  .sub-task-input {
+    width: 70%;
+  }
+}
