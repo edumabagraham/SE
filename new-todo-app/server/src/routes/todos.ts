@@ -32,7 +32,7 @@ router.post('/', async (req, res, next) => {
     res.status(201).json({ data: todo });
   } catch (error) {
     next(error);
-  }
+  }  
 });
 
 router.patch('/:id', async (req, res, next) => {
