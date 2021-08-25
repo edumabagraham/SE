@@ -2,8 +2,7 @@ import { setup } from '../config';
 import request from 'supertest';
 import express from 'express';
 import bootstrapApp from '../../src/app';
-import { ExpectationFailed } from 'http-errors';
-import { expectCt } from 'helmet';
+
 
 describe('API tests - todos', () => {
   let app: express.Express;
@@ -35,9 +34,9 @@ describe('API tests - todos', () => {
     expect(body.data).toHaveLength(1);
   });
 
-  it('should return data at that id', async () => {
-    const { status, body } = await request(app).patch('/api/todos/1').send({id: 'id'});
-    expect(status).toBe(201);
-    expectCt(body.data.id).toMatch('id');
+  // Patch test
+  it('should update data at that id', async () => {
+    const { status, body } = await request(app).patch('/api/todos/1').send({ status: 'completed' });
+    expect(status).toBe(204);
   });
 });
