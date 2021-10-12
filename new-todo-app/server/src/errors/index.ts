@@ -48,6 +48,7 @@ function* errorGenerator(error: Error) {
   yield parseIsHttpError(error);
 }
 
+//Pure function
 export function handle404(_: Request, __: Response, next: NextFunction) {
   const error = new httpErrors.NotFound('API Endpoint not found');
   next(error);
